@@ -2438,6 +2438,21 @@ namespace MinorShift.Emuera.GameProc.Function
 				state.JumpTo(jumpto);
 			}
 		}
+
+
+		#endregion
+
+
+		// TODO!
+		#region KFunction
+		private sealed class Debug_Test_Instuction : AbstractInstruction
+		{
+			public Debug_Test_Instuction()
+			{
+				ArgBuilder = ArgumentParser.GetArgumentBuilder(FunctionArgType.VOID);
+			}
+		}
+
 		#endregion
 	}
 }

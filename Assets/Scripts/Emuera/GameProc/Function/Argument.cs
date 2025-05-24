@@ -537,8 +537,4 @@ namespace MinorShift.Emuera.GameProc.Function
 		readonly public string[] ConstStrList;
 	}
 	#endregion
-
-
-
-
 }

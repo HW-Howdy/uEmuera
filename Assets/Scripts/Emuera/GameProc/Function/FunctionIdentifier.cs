@@ -379,6 +379,57 @@ namespace MinorShift.Emuera.GameProc.Function
 
 			addFunction(FunctionCode.INPUTMOUSEKEY, new INPUTMOUSEKEY_Instruction());
 			addFunction(FunctionCode.AWAIT, new AWAIT_Instruction());
+
+			// TODO!
+			// DataTable 관련
+			addFunction(FunctionCode.DT_CREATE,
+				new Debug_Test_Instuction());        // DT_CREATE @"TableName"
+			addFunction(FunctionCode.DT_COLUMN_ADD,
+				new Debug_Test_Instuction());    // DT_COLUMN_ADD @"TableName", "colName"
+			addFunction(FunctionCode.DT_ROW_ADD,
+				new Debug_Test_Instuction());       // DT_ROW_ADD @"TableName", "colName", value
+			addFunction(FunctionCode.DT_RELEASE,
+				new Debug_Test_Instuction());      // DT_RELEASE @"TableName"
+
+			addFunction(FunctionCode.DT_ROW_LENGTH,
+				new Debug_Test_Instuction());    // DT_ROW_LENGTH(@"TableName")
+			addFunction(FunctionCode.DT_CELL_GETS,
+				new Debug_Test_Instuction());     // DT_CELL_GETS(@"TableName", rowIndex, "colName")
+
+			// 변수 동적 접근
+			addFunction(FunctionCode.EXISTVAR,
+				new Debug_Test_Instuction());      // EXISTVAR("varName")
+			addFunction(FunctionCode.GETVAR,
+				new Debug_Test_Instuction());        // GETVAR("varName")
+			addFunction(FunctionCode.GETVARS,
+				new Debug_Test_Instuction());       // GETVARS("varName")
+			addFunction(FunctionCode.HTML_STRINGLEN,
+				new Debug_Test_Instuction()); // HTML_STRINGLEN("htmlString")
+
+			// 정규식
+			addFunction(FunctionCode.REGEXPMATCH,
+				new Debug_Test_Instuction());   // REGEXPMATCH(text, pattern, result, results)
+
+			// 사운드/미디어
+			addFunction(FunctionCode.PLAYBGM,
+				new Debug_Test_Instuction());       // PLAYBGM @"path/to/file"
+			addFunction(FunctionCode.SETBGMVOLUME,
+				new Debug_Test_Instuction());  // SETBGMVOLUME volume
+			addFunction(FunctionCode.SETSOUNDVOLUME,
+				new Debug_Test_Instuction()); // SETSOUNDVOLUME volume
+			addFunction(FunctionCode.STOPBGM,
+				new Debug_Test_Instuction());       // STOPBGM
+			addFunction(FunctionCode.STOPSOUND,
+				new Debug_Test_Instuction());      // STOPSOUND
+			addFunction(FunctionCode.CLEARMEMORY,
+				new Debug_Test_Instuction());    // CLEARMEMORY
+
+			// 안전 호출 (TRYCALLF 계열)
+			addFunction(FunctionCode.TRYCALLF,
+				new Debug_Test_Instuction());      // TRYCALLF FuncName
+			addFunction(FunctionCode.TRYCALLFORMF,
+				new Debug_Test_Instuction());  // TRYCALLFORMF FuncNameFormat
+
 			#region 式中関数の引数違い
 			addFunction(FunctionCode.VARSIZE, argb[FunctionArgType.SP_VAR], METHOD_SAFE | EXTENDED);//動作が違うのでMETHOD化できない
 			addFunction(FunctionCode.GETTIME, argb[FunctionArgType.VOID], METHOD_SAFE | EXTENDED);//2つに代入する必要があるのでMETHOD化できない
