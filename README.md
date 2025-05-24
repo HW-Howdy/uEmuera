@@ -54,3 +54,27 @@ Emuera是Emulator of Eramaker的缩写，是Windows平台下文字游戏平台�
 ![Screenshot4](Screenshot/screenshot4.png)
 缩放控制
 ![Screenshot5](Screenshot/screenshot5.png)
+
+----
+Changes (or scheduled)
+
+1. Modifying the following ERB commands to work (scheduled)
+  - DT_CREATE
+  - DT_COLUMN_ADD
+  - DT_ROW_ADD
+  - DT_RELEASE
+  - DT_ROW_LENGTH
+  - DT_CELL_GETS
+  - EXISTVAR
+  - GETVAR
+  - GETVARS
+  - HTML_STRINGLEN
+  - REGEXPMATCH
+  - PLAYBGM
+  - SETBGMVOLUME
+  - SETSOUNDVOLUME
+  - STOPBGM
+  - STOPSOUND
+  - CLEARMEMORY
+  - TRYCALLF
+  - TRYCALLFORMF
